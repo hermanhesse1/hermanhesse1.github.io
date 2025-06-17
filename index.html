@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>My Learning Page</title>
 
-  <!-- 1. Preconnect & load fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
     href="https://fonts.googleapis.com/css2?
       family=Merriweather:wght@700&
       family=Open+Sans:ital,wght@0,400;0,600;1,400&
-      display=swap"
+      display=swap" 
     rel="stylesheet">
 
-  <!-- 2. Custom stylesheet -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#thoughts">Thoughts</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><button id="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+    </ul>
+  </nav>
+
+  <header id="hero" class="hero">
     <h1>My Ongoing Learning</h1>
-    <p>A space for thoughts, books, and research interests.</p>
+    <p>A curated space for ideas, books, and research.</p>
   </header>
 
   <main>
@@ -29,14 +40,15 @@
       <h2>Interesting Thoughts</h2>
       <ul>
         <li>Why randomness sparks creativity</li>
-        <li>On the art of analog note-taking</li>
-        <li>Connections between music and math</li>
+        <li>The value of handwritten notes in a digital age</li>
+        <li>Intersections of music theory and mathematics</li>
       </ul>
     </section>
 
     <section class="section" id="books">
       <h2>Books I’m Reading</h2>
       <ul>
+        <li><em>Burnout Society</em> by Byung-Chul Han</li>
         <li><em>Deep Work</em> by Cal Newport</li>
         <li><em>Thinking, Fast and Slow</em> by Daniel Kahneman</li>
         <li><em>The Master and His Emissary</em> by Iain McGilchrist</li>
@@ -48,7 +60,7 @@
       <ul>
         <li><a href="https://arxiv.org/abs/2106.04567">Graph Neural Networks</a></li>
         <li>Computational creativity and generative art</li>
-        <li>Human-computer interaction in data science</li>
+        <li>Human–computer interaction in data science</li>
       </ul>
     </section>
   </main>
@@ -56,6 +68,22 @@
   <footer>
     <p>Last updated: June 17, 2025</p>
   </footer>
+
+  <script>
+    // Dark/light mode toggle
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const current = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    root.setAttribute('data-theme', current);
+    btn.textContent = current === 'dark' ? '🌞' : '🌙';
+    btn.onclick = () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '🌞' : '🌙';
+    };
+  </script>
 
 </body>
 </html>
