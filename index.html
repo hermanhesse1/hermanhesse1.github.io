@@ -3,87 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>My Learning Page</title>
-
+  <title>Intellectual Pursuits - A Digital Garden</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?
-      family=Merriweather:wght@700&
-      family=Open+Sans:ital,wght@0,400;0,600;1,400&
-      display=swap" 
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <nav>
     <ul class="nav-list">
       <li><a href="#hero">Home</a></li>
       <li><a href="#thoughts">Thoughts</a></li>
       <li><a href="#books">Books</a></li>
       <li><a href="#research">Research</a></li>
-      <li><button id="theme-toggle" aria-label="Toggle dark mode">🌓</button></li>
+      <li><button id="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
     </ul>
   </nav>
-
+  
   <header id="hero" class="hero">
-    <h1>My Ongoing Learning</h1>
-    <p>A curated space for ideas, books, and research.</p>
+    <div class="hero-content">
+      <h1>A Digital Garden of Ideas</h1>
+      <p>Cultivating knowledge at the intersection of philosophy, technology, and human creativity</p>
+    </div>
+    <div class="scroll-indicator"></div>
   </header>
-
+  
   <main>
     <section class="section" id="thoughts">
-      <h2>Interesting Thoughts</h2>
-      <ul>
-        <li>Why randomness sparks creativity</li>
-        <li>The value of handwritten notes in a digital age</li>
-        <li>Intersections of music theory and mathematics</li>
-      </ul>
+      <h2>Recent Thoughts</h2>
+      <div class="thoughts-grid">
+        <div class="thought-card">
+          <h3>The Paradox of Digital Minimalism</h3>
+          <p>In our quest to simplify our digital lives, we often create more complex systems. The irony lies in how minimalist apps require maximum effort to maintain...</p>
+          <div class="thought-date">June 15, 2025</div>
+        </div>
+        <div class="thought-card">
+          <h3>Embodied Cognition in Virtual Spaces</h3>
+          <p>As we spend more time in digital environments, how does the absence of physical embodiment affect our cognitive processes? Recent VR studies suggest...</p>
+          <div class="thought-date">June 10, 2025</div>
+        </div>
+        <div class="thought-card">
+          <h3>The Renaissance of Handwritten Notes</h3>
+          <p>Despite living in a digital age, there's a growing movement back to analog note-taking. The tactile experience of pen on paper activates different neural pathways...</p>
+          <div class="thought-date">June 5, 2025</div>
+        </div>
+        <div class="thought-card">
+          <h3>Algorithmic Serendipity</h3>
+          <p>Can algorithms truly replicate the joy of stumbling upon unexpected discoveries? The tension between personalized recommendations and genuine surprise...</p>
+          <div class="thought-date">May 28, 2025</div>
+        </div>
+      </div>
     </section>
-
+    
     <section class="section" id="books">
-      <h2>Books I’m Reading</h2>
-      <ul>
-        <li><em>Burnout Society</em> by Byung-Chul Han</li>
-        <li><em>Deep Work</em> by Cal Newport</li>
-        <li><em>Thinking, Fast and Slow</em> by Daniel Kahneman</li>
-        <li><em>The Master and His Emissary</em> by Iain McGilchrist</li>
-      </ul>
+      <h2>Current Reading List</h2>
+      <div class="books-grid">
+        <div class="book-card">
+          <div class="book-cover">📚</div>
+          <div class="book-info">
+            <div class="book-title">The Burnout Society</div>
+            <div class="book-author">Byung-Chul Han</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">🧠</div>
+          <div class="book-info">
+            <div class="book-title">The Master and His Emissary</div>
+            <div class="book-author">Iain McGilchrist</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">☆</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">💭</div>
+          <div class="book-info">
+            <div class="book-title">Thinking, Fast and Slow</div>
+            <div class="book-author">Daniel Kahneman</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">🎯</div>
+          <div class="book-info">
+            <div class="book-title">Deep Work</div>
+            <div class="book-author">Cal Newport</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">☆</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">🌊</div>
+          <div class="book-info">
+            <div class="book-title">The Shallows</div>
+            <div class="book-author">Nicholas Carr</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">☆</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 40%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-cover">🔮</div>
+          <div class="book-info">
+            <div class="book-title">The Black Swan</div>
+            <div class="book-author">Nassim Nicholas Taleb</div>
+            <div class="book-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="book-progress">
+              <div class="progress-bar" style="width: 30%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
+    
     <section class="section" id="research">
       <h2>Research Interests</h2>
-      <ul>
-        <li><a href="https://arxiv.org/abs/2106.04567">Graph Neural Networks</a></li>
-        <li>Computational creativity and generative art</li>
-        <li>Human–computer interaction in data science</li>
-      </ul>
+      <div class="research-list">
+        <div class="research-item">
+          <h3>Graph Neural Networks for Social Dynamics</h3>
+          <p>Exploring how GNNs can model complex social interactions and predict emergent collective behaviors in online communities.</p>
+          <div class="research-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Network Science</span>
+            <span class="tag">Social Computing</span>
+          </div>
+        </div>
+        <div class="research-item">
+          <h3>Computational Creativity & Generative Art</h3>
+          <p>Investigating the intersection of artificial intelligence and human creativity, particularly in the context of collaborative human-AI art creation.</p>
+          <div class="research-tags">
+            <span class="tag">AI Art</span>
+            <span class="tag">Creative Coding</span>
+            <span class="tag">Human-AI Interaction</span>
+          </div>
+        </div>
+        <div class="research-item">
+          <h3>Embodied Interfaces for Data Exploration</h3>
+          <p>Developing novel interaction paradigms that leverage spatial cognition and embodied metaphors for intuitive data visualization.</p>
+          <div class="research-tags">
+            <span class="tag">HCI</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Embodied Cognition</span>
+          </div>
+        </div>
+        <div class="research-item">
+          <h3>Philosophy of Mind in the Age of AI</h3>
+          <p>Examining how advances in artificial intelligence challenge and reshape our understanding of consciousness, intentionality, and mental representation.</p>
+          <div class="research-tags">
+            <span class="tag">Philosophy</span>
+            <span class="tag">Cognitive Science</span>
+            <span class="tag">AI Ethics</span>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-
+  
   <footer>
-    <p>Last updated: June 17, 2025</p>
+    <div class="footer-content">
+      <p>© 2025 | Built with curiosity and caffeinated contemplation</p>
+      <div class="social-links">
+        <a href="https://github.com/hermanhesse1" aria-label="GitHub">📦</a>
+        <a href="#" aria-label="Email">✉️</a>
+        <a href="#" aria-label="RSS Feed">📡</a>
+      </div>
+    </div>
   </footer>
-
+  
   <script>
-    // Dark/light mode toggle
+    // Theme toggle with smooth transitions
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
-    const current = localStorage.getItem('theme') || 
-                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    root.setAttribute('data-theme', current);
-    btn.textContent = current === 'dark' ? '🌞' : '🌙';
-    btn.onclick = () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? '🌞' : '🌙';
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-theme', currentTheme);
+    btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    
+    btn.addEventListener('click', () => {
+      const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+    
+    // Parallax effect for hero section
+    let ticking = false;
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const hero = document.querySelector('.hero');
+      const heroContent = document.querySelector('.hero-content');
+      
+      if (hero && heroContent) {
+        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        heroContent.style.transform = `translateY(${scrolled * 0.2}px)`;
+      }
+      
+      ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    });
   </script>
-
 </body>
 </html>
