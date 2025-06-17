@@ -1,75 +1,135 @@
+/* === CSS VARIABLES & RESET === */
 :root {
-  --max-width: 680px;
+  --max-width: 700px;
   --padding: 1.5rem;
   --line-height: 1.65;
-  --color-text: #333;
-  --color-heading: #111;
-  --color-border: #ddd;
-  --color-bg: #fafafa;
-  --color-accent: #0066cc;
+  --clr-bg: #fafafa;
+  --clr-text: #333;
+  --clr-heading: #111;
+  --clr-border: #ddd;
+  --clr-accent: #0066cc;
+  --clr-hero-bg: #e0f7fa;
+}
+
+:root[data-theme="dark"] {
+  --clr-bg: #121212;
+  --clr-text: #ddd;
+  --clr-heading: #fff;
+  --clr-border: #444;
+  --clr-accent: #4ea1ff;
+  --clr-hero-bg: #1f1f1f;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* === GLOBAL STYLES === */
 body {
   font-family: 'Open Sans', sans-serif;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: var(--padding);
+  background: var(--clr-bg);
+  color: var(--clr-text);
   line-height: var(--line-height);
-  color: var(--color-text);
-  background: var(--color-bg);
-}
-
-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 2.5rem;
-  color: var(--color-heading);
-  margin-bottom: 0.2rem;
-}
-
-header p {
-  font-style: italic;
-  color: #555;
-}
-
-h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 1.75rem;
-  color: var(--color-heading);
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.section ul {
-  list-style: disc outside;
-  margin-left: 1.2rem;
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--clr-accent);
   text-decoration: none;
-  border-bottom: 1px dotted var(--color-accent);
+  border-bottom: 1px dotted var(--clr-accent);
 }
-
 a:hover {
   text-decoration: underline;
 }
 
-footer {
-  font-size: 0.9rem;
-  color: #666;
+ul {
+  list-style: disc outside;
+  margin-left: 1.2rem;
+}
+
+/* === NAVIGATION === */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--clr-bg);
+  border-bottom: 1px solid var(--clr-border);
+  z-index: 10;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem var(--padding);
+}
+.nav-list a,
+.nav-list button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-accent);
+}
+.nav-list button:hover,
+.nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: var(--clr-hero-bg) center/cover no-repeat;
   text-align: center;
-  margin-top: 4rem;
-  border-top: 1px solid var(--color-border);
+  padding: 4rem var(--padding);
+}
+.hero h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.8rem;
+  color: var(--clr-heading);
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-style: italic;
+  color: #555;
+}
+
+/* === CONTENT LAYOUT === */
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--padding);
+}
+.section {
+  margin-bottom: 2.5rem;
+}
+.section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: var(--clr-heading);
+  border-bottom: 2px solid var(--clr-border);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+/* two-column on wider screens */
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .section {
+    margin-bottom: 0;
+  }
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin: 3rem 0;
+  border-top: 1px solid var(--clr-border);
   padding-top: 1rem;
 }
