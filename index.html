@@ -4,21 +4,58 @@
   <meta charset="UTF-8">
   <title>My Learning Page</title>
 
-  <!-- 1. Preconnect to Google Fonts -->
+  <!-- 1. Preconnect & load fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 2. Import your chosen fonts -->
-  <link href="https://fonts.googleapis.com/css2?
-    family=Merriweather:wght@700&
-    family=Open+Sans:ital,wght@0,400;0,600;1,400&
-    display=swap"
+  <link 
+    href="https://fonts.googleapis.com/css2?
+      family=Merriweather:wght@700&
+      family=Open+Sans:ital,wght@0,400;0,600;1,400&
+      display=swap"
     rel="stylesheet">
 
-  <!-- 3. Link your custom stylesheet -->
+  <!-- 2. Custom stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- …your content… -->
+
+  <header>
+    <h1>My Ongoing Learning</h1>
+    <p>A space for thoughts, books, and research interests.</p>
+  </header>
+
+  <main>
+    <section class="section" id="thoughts">
+      <h2>Interesting Thoughts</h2>
+      <ul>
+        <li>Why randomness sparks creativity</li>
+        <li>On the art of analog note-taking</li>
+        <li>Connections between music and math</li>
+      </ul>
+    </section>
+
+    <section class="section" id="books">
+      <h2>Books I’m Reading</h2>
+      <ul>
+        <li><em>Deep Work</em> by Cal Newport</li>
+        <li><em>Thinking, Fast and Slow</em> by Daniel Kahneman</li>
+        <li><em>The Master and His Emissary</em> by Iain McGilchrist</li>
+      </ul>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2106.04567">Graph Neural Networks</a></li>
+        <li>Computational creativity and generative art</li>
+        <li>Human-computer interaction in data science</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Last updated: June 17, 2025</p>
+  </footer>
+
 </body>
 </html>
