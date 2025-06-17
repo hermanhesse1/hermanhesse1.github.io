@@ -1,5 +1,75 @@
-/* paste the CSS from above here */
 :root {
-  /* …your variables… */
+  --max-width: 680px;
+  --padding: 1.5rem;
+  --line-height: 1.65;
+  --color-text: #333;
+  --color-heading: #111;
+  --color-border: #ddd;
+  --color-bg: #fafafa;
+  --color-accent: #0066cc;
 }
-/* …rest of styles… */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: var(--padding);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  color: var(--color-heading);
+  margin-bottom: 0.2rem;
+}
+
+header p {
+  font-style: italic;
+  color: #555;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.75rem;
+  color: var(--color-heading);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: disc outside;
+  margin-left: 1.2rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
